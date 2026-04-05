@@ -1,0 +1,17 @@
+experiment:
+  name: "baseline_ridge_ar"
+  description: "Ridge regression with AR features"
+
+model:
+  type: "ridge"
+  phase: "ar"
+
+hyperparameters:
+  train_window: 90
+  alphas: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

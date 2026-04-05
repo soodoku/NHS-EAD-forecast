@@ -1,0 +1,23 @@
+experiment:
+  name: "xgboost_ar"
+  description: "XGBoost with AR features"
+
+model:
+  type: "xgboost"
+  phase: "ar"
+
+hyperparameters:
+  train_window: 90
+  n_estimators: 100
+  max_depth: 3
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.0
+  reg_lambda: 1.0
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

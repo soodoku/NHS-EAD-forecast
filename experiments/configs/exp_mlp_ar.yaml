@@ -1,0 +1,21 @@
+experiment:
+  name: "mlp_ar"
+  description: "MLP neural network with AR features"
+
+model:
+  type: "mlp"
+  phase: "ar"
+
+hyperparameters:
+  train_window: 90
+  hidden_sizes: [64, 32]
+  learning_rate: 0.001
+  epochs: 100
+  batch_size: 32
+  dropout: 0.1
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

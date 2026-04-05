@@ -1,0 +1,21 @@
+timestamp	run_id	commit	cv_mse_1_5	cv_mse_6_10	cv_std	runtime_sec	keep	description
+2026-04-03T12:23:46	001	e5f6114	0.138700	0.131698	0.068519	0	yes	Naive persistence baseline (predict lag-3 value)
+2026-04-03T12:25:52	002	e5f6114	0.080163	0.109166	0.045166	7	yes	Ridge regression with AR features
+2026-04-03T12:29:10	003	e5f6114	0.079284	0.094405	0.049735	86	yes	ElasticNet with AR features
+2026-04-03T12:32:21	004	e5f6114	0.105911	0.097384	0.069725	87	no	ElasticNet with enhanced features (rolling, DOW)
+2026-04-03T12:42:09	005	e5f6114	0.048891	0.050872	0.029404	34	yes	XGBoost with AR features
+2026-04-03T12:42:40	006	e5f6114	0.169645	0.195074	0.127483	61	no	MLP neural network with AR features
+2026-04-03T13:02:57	007	e5f6114	0.048426	0.051282	0.027612	83	yes	XGBoost AR with tuned hyperparameters
+2026-04-03T13:04:02	007	e5f6114	0.049065	0.054099	0.030933	20	no	XGBoost with enhanced features (rolling + DOW)
+2026-04-03T16:44:49	008	e5f6114	0.048297	0.050093	0.028834	91	yes	XGBoost with AR features + UK bank holiday features
+2026-04-03T16:49:23	009	e5f6114	0.048986	0.050978	0.028016	116	no	XGBoost with AR features + lagged exogenous ED metrics
+2026-04-03T16:54:45	010	e5f6114	0.048986	0.050978	0.028016	118	no	XGBoost with AR features + lagged exogenous ED metrics
+2026-04-03T21:42:51	011	e5f6114	0.026429	0.029144	0.000000	19	no	Quick test of upstream features with holdout
+2026-04-03T21:45:25	012	e5f6114	0.024675	0.029085	0.000000	11	no	Quick test of domain PCA features with holdout
+2026-04-03T21:49:05	013	e5f6114	0.049287	0.052117	0.028124	69	no	XGBoost AR + targeted upstream pressure features
+2026-04-03T21:52:30	014	e5f6114	0.048349	0.050846	0.028403	76	no	XGBoost AR + domain PCA compressed features
+2026-04-04T10:38:13	015	e5f6114	0.049150	0.050485	0.026723	55	no	XGBoost AR + upstream features + bank holidays
+2026-04-04T11:55:38	016	e5f6114	0.043264	0.043278	0.032017	356	yes	XGBoost AR with 365-day training window
+2026-04-04T12:02:52	016	e5f6114	0.043264	0.043278	0.032017	221	yes	XGBoost AR with 365-day training window
+2026-04-04T16:45:02	017	e5f6114	0.099879	0.104144	0.039319	39	no	Prophet with weekly + yearly seasonality
+2026-04-04T16:49:55	018	e5f6114	0.084706	0.088835	0.031213	40	no	Prophet with weekly + yearly seasonality

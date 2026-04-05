@@ -1,0 +1,21 @@
+experiment:
+  name: "prophet_baseline"
+  description: "Prophet with weekly + yearly seasonality"
+
+model:
+  type: "prophet"
+  phase: "prophet"
+
+hyperparameters:
+  yearly_seasonality: true
+  weekly_seasonality: true
+  daily_seasonality: false
+  seasonality_mode: "additive"
+  changepoint_prior_scale: 0.05
+  seasonality_prior_scale: 10.0
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

@@ -1,0 +1,23 @@
+experiment:
+  name: "xgboost_window_365"
+  description: "XGBoost AR with 365-day training window"
+
+model:
+  type: "xgboost"
+  phase: "ar"
+
+hyperparameters:
+  train_window: 365
+  n_estimators: 200
+  max_depth: 5
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.6
+  reg_alpha: 0.1
+  reg_lambda: 2.0
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

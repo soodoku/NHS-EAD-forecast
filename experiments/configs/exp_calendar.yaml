@@ -1,0 +1,23 @@
+experiment:
+  name: "xgboost_calendar"
+  description: "XGBoost with AR features + UK bank holiday features"
+
+model:
+  type: "xgboost"
+  phase: "ar_calendar"
+
+hyperparameters:
+  train_window: 90
+  n_estimators: 200
+  max_depth: 5
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.0
+  reg_lambda: 1.0
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

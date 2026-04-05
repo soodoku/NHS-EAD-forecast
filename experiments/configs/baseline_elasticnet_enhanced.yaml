@@ -1,0 +1,18 @@
+experiment:
+  name: "baseline_elasticnet_enhanced"
+  description: "ElasticNet with enhanced features (rolling, DOW)"
+
+model:
+  type: "elasticnet"
+  phase: "enhanced"
+
+hyperparameters:
+  train_window: 90
+  alphas: [0.001, 0.01, 0.1, 1.0, 10.0]
+  l1_ratio: [0.1, 0.5, 0.7, 0.9, 0.95]
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

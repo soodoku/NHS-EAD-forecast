@@ -1,0 +1,20 @@
+evaluation:
+  end_date: '2025-09-30'
+  method: holdout
+  start_date: '2025-07-01'
+experiment:
+  description: Quick test of upstream features with holdout
+  name: test_upstream_holdout
+hyperparameters:
+  colsample_bytree: 0.6
+  learning_rate: 0.1
+  max_depth: 4
+  n_estimators: 100
+  reg_alpha: 0.1
+  reg_lambda: 2.0
+  subsample: 0.8
+  train_window: 90
+model:
+  phase: ar_upstream
+  type: xgboost
+seed: 42

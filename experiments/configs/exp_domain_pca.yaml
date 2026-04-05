@@ -1,0 +1,23 @@
+experiment:
+  name: "xgboost_domain_pca"
+  description: "XGBoost AR + domain PCA compressed features"
+
+model:
+  type: "xgboost"
+  phase: "ar_domain_pca"
+
+hyperparameters:
+  train_window: 90
+  n_estimators: 200
+  max_depth: 5
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.7
+  reg_alpha: 0.1
+  reg_lambda: 1.5
+
+evaluation:
+  method: "cv"
+  cv_folds: 3
+
+seed: 42

@@ -1,0 +1,19 @@
+evaluation:
+  cv_folds: 3
+  method: cv
+experiment:
+  description: XGBoost AR + targeted upstream pressure features
+  name: xgboost_upstream
+hyperparameters:
+  colsample_bytree: 0.6
+  learning_rate: 0.05
+  max_depth: 5
+  n_estimators: 200
+  reg_alpha: 0.1
+  reg_lambda: 2.0
+  subsample: 0.8
+  train_window: 90
+model:
+  phase: ar_upstream
+  type: xgboost
+seed: 42

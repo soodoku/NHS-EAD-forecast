@@ -1,0 +1,20 @@
+evaluation:
+  end_date: '2025-09-30'
+  method: holdout
+  start_date: '2025-07-01'
+experiment:
+  description: Quick test of domain PCA features with holdout
+  name: test_domain_pca_holdout
+hyperparameters:
+  colsample_bytree: 0.7
+  learning_rate: 0.1
+  max_depth: 4
+  n_estimators: 100
+  reg_alpha: 0.1
+  reg_lambda: 1.5
+  subsample: 0.8
+  train_window: 90
+model:
+  phase: ar_domain_pca
+  type: xgboost
+seed: 42
